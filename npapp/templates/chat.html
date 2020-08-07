@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:whitesmoke;
+            text-align: center;
+        }
+        form{
+            color: green;
+            text-align: center;
+            size: 10px;
+        }
+        p{
+            text-align: center;
+            color: black;
+            border-radius: 10px;
+        }
+        div{
+            color:blueviolet;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>CHARTBOT FOR chronic kidney disease</h1>
+    </div>
+    <form action="/snv/" method="POST">
+        CHARTBOT:<input type="text" name="exp"><br>
+        {%csrf_token%}
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+    <p>{{data}}</p>
+</body>
+</html>
